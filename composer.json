@@ -1,6 +1,14 @@
 {
     "name": "thesis/headers",
-    "description": "Thesis Headers",
+    "description": "Typed headers for PHP.",
+    "keywords": [
+        "headers",
+        "http-headers",
+        "protocol",
+        "typed-headers",
+        "enum",
+        "immutable"
+    ],
     "license": "MIT",
     "type": "library",
     "authors": [
