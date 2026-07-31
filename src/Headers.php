@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Thesis;
 
+use Thesis\Headers\CannotDecodeHeader;
 use Thesis\Headers\Header;
 use Thesis\Headers\NoHeader;
 
@@ -42,6 +43,8 @@ final class Headers
      * @template T
      * @param Header<T> $header
      * @return T
+     * @throws NoHeader
+     * @throws CannotDecodeHeader
      */
     public function get(Header $header): mixed
     {
@@ -61,6 +64,7 @@ final class Headers
      * @template T
      * @param Header<T> $header
      * @return ?T
+     * @throws CannotDecodeHeader
      */
     public function find(Header $header): mixed
     {

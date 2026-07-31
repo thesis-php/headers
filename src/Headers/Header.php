@@ -20,6 +20,7 @@ interface Header
 
     /**
      * @return T
+     * @throws CannotDecodeHeader
      */
     public function decode(string $encoded): mixed;
 }
