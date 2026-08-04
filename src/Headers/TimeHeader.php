@@ -16,7 +16,7 @@ final readonly class TimeHeader implements Header
      */
     public function __construct(
         public string $name,
-        private string $format = DATE_RFC3339,
+        private string $format = 'Y-m-d\TH:i:s.uP',
     ) {}
 
     public function encode(mixed $value): string

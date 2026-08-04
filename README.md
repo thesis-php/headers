@@ -38,14 +38,14 @@ enum ContentType: string
 }
 
 const CONTENT_TYPE = new BackedEnumHeader(ContentType::class, 'content-type');
-const DATE = new TimeHeader('date', DATE_W3C);
+const DATE = new TimeHeader('date');
 const IS_PRIVATE = new BoolHeader('x-private');
 define('RETRY_AFTER', IntHeader::nonNegative('retry-after'));
 const REQUEST_ID = new NonEmptyStringHeader('x-request-id');
 
 $raw = [
     'content-type' => 'application/json',
-    'date' => '2026-07-31T12:00:00+00:00',
+    'date' => '2026-07-31T12:00:00.123456+00:00',
     'retry-after' => '60',
     'x-private' => '0',
 ];
